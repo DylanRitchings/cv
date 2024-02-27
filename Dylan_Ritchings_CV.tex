@@ -1,8 +1,8 @@
 \documentclass[12pt]{article}
 
 %% PACKAGES %
-\usepackage[english]{babel} % multilingual support
-\usepackage[utf8]{inputenc} % encoding
+\usepackage[english]{babel} 
+\usepackage[utf8]{inputenc} 
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -14,7 +14,6 @@
     }
 \usepackage{fontspec}
 \setmainfont{LiberationSans}
-% set the page layout
 \usepackage{geometry}
 \geometry{
   a4paper,
@@ -23,15 +22,13 @@
   %bottom=
   top=15mm}
 
-% empty the headers, footers, pagenumbers…
 \pagestyle{empty}
 
-% Custom sectioning with secsty
 \usepackage{sectsty}
 
 \sectionfont{%                        
-    \large % make sections smaller
-    \sectionrule{0pt}{0pt}{-5pt}{1pt} % insert a thin rule
+    \large 
+    \sectionrule{0pt}{0pt}{-5pt}{1pt} 
 }
 
 %% MACROS %%
@@ -49,13 +46,11 @@
 
 % personal information
 \newcommand{\info}[2]{
-% set specific indentation for personal information
   \noindent\hangindent=2em\hangafter=0
-% create a box to align two pieces of text
-  \parbox{\spacebox}{%
+  \parbox{\spacebox}{
     \textbf{#1:}} #2 \par
-  } % entry value
-
+  }
+% links
 \newcommand{\link}[2]{
   \noindent\hangindent=2em\hangafter=0
   \textbf{#1:} \url{#2} \par
@@ -63,56 +58,53 @@
 
 % skill
 \newcommand{\skill}[2]{
-% set specific indentation for personal informationskill
 \noindent\hangafter=0
 \begin{minipage}[t]{0.31\textwidth}
+  % skill type
   \textbf{#1} 
   \end{minipage}
-  \hfill % add space between columns
+  \hfill 
   \begin{minipage}[t]{0.6\textwidth}
+      %skills 
       #2
   \end{minipage}
   \par
   \vspace*{0.5em}} % space after each entry
 
 % education entry
-\newcommand{\education}[4]{
+\newcommand{\education}[3]{
 
-% name of the studies
+  % school\title
   \noindent  \textbf{#1}
-  % at the right the duration
     \hfill 
     \parbox{9em}{%
+      % subjects
     \centering\textbf{#2}} \par
     \vspace*{0.5em} 
- % new paragraph with the school in italics
+    % date
      \noindent \textit{#3} \par
-     % description with no hanging and in smaller text
      \vspace*{1em}
-     \noindent\hangindent=2em\hangafter=0 \small #4 
-%back to normal size
 \normalsize \par}
 
 % work experience
 
 \newcommand{\work}[4]{
-% name of the work
+% Role
   \noindent  \textbf{#1}
-% at the right the duration
   \hfill 
-  {%
+  {
+    % Date
   \centering\textbf{#2}} \par
-% new paragraph with the school in italics
+    % Company
   \noindent \textit{#3} \par
-% description with no hanging and in smaller text
   \vspace*{0.3em}
+  % Information
   \noindent\hangafter=0 \small #4 
-%back to normal size
 \normalsize \par}
 
 \begin{document}
 
-% name and motto
+% name 
 \name{Dylan Ritchings}
 \vspace*{-10pt}
 
@@ -122,8 +114,9 @@
 \info{Phone}{}
 \info{Location}{}
 
+%links
 \sepspace
-\link{Github}{https://github.com/DylanRitchings/}
+\link{GitHub}{https://github.com/DylanRitchings/}
 \link{LinkedIn}{https://www.linkedin.com/in/dylan-ritchings/}
 
 % work experience
@@ -161,13 +154,14 @@
 % education
 \section*{Education \& Certification}
 
-\education{AWS Certified Cloud Practitioner} {06/2022 -- 06/2025} {} {}
-% \education{QA Academy Training} {02/2021 – 09/2021} {Cloud Technologies Consultant Training} {} 
-\education{University of Portsmouth} {09/2017 -- 06/2020} {BSc Software Engineering (2:1, 3.45 GPA)} {}
-\education{Collyer's VI Form College, Horsham} {09/2015 -- 06/2017} {A level: Physics (B), Computer Science (C), Environmental Studies (D)} {}
-\education{Warden Park School Haywards Heath} {09/2010 -- 07/2015} {9 GCSEs: Maths (A), Science (A), Additional Science (B), Computer Science (B), English Literature, English Language, Philosophy and Ethics, Product Design} {}
+\education{AWS Certified Cloud Practitioner} {06/2022 -- 06/2025} {}
+% \education{QA Academy Training} {02/2021 – 09/2021} {Cloud Technologies Consultant Training} 
+\education{University of Portsmouth} {09/2017 -- 06/2020} {BSc Software Engineering (2:1, 3.45 GPA)} 
+\education{Collyer's VI Form College, Horsham} {09/2015 -- 06/2017} {A level: Physics (B), Computer Science (C), Environmental Studies (D)}
+\education{Warden Park School Haywards Heath} {09/2010 -- 07/2015} {9 GCSEs: Maths (A), Science (A), Additional Science (B), Computer Science (B), English Literature, English Language, Philosophy and Ethics, Product Design} 
 
 \section*{}
 \paragraph {Created with \LaTeX: \url{https://www.github.com/DylanRitchings/cv}}
 
 \end{document}
+
